@@ -1,0 +1,14 @@
+/* селектор по тегу */
+body {
+    margin: 15px;
+}
+
+/* селектор по классу */
+.content {
+   padding: 20px 50px;
+}
+
+/* селектор по индентификатору  */
+#el_1 {
+    background-color: gold;
+}
