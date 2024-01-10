@@ -1,4 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: 'Overlock SC', 'Arial', sans-serif;
+    display: grid;
+    grid-template-areas: 
+    "h h h h"
+    "m m m m"
+    "f f f f";
+    grid-template-rows: 1fr 8fr 1fr;
+}
+
 /* Комбинированный селектор */
 header, footer {
     border: 3px solid green;
+
+}
+
+/*  *** header *** */
+header {
+    grid-area: h;
+    display: grid;
+}
+
+.logo {
+    grid-column: 1/3;
+}
+.nav {
+    grid-column: 3/6;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+/* Комбинированный селектор потомка */
+.nav a {
+    text-decoration: none;
+    font-size: medium;
+    text-transform: uppercase;
+    color: green;
+}
+/* псевдокласс для эффекта наведения курсора */
+.nav a:hover {
+    color: rebeccapurple;
+}
+
+/* псевдоэлементы */
+.nav>li::after {
+    margin-left: 20px;
+    content: "|";
+}
+
+/* *** main *** */
+
+main {
+    grid-area: m;
+}
+
+/*  *** footer *** */
+footer {
+    grid-area: f;
 }
