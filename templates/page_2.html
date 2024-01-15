@@ -4,8 +4,27 @@
 <div>
     <h1>Page 2</h1>
 
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum porro et fuga, officiis ratione minus maiores quibusdam aperiam inventore a tempore explicabo excepturi magni hic laborum eveniet cupiditate facere ab!
-    </p>
+    <form method="post">
+        <!-- поля ввода данных -->
+        <div class="field">
+            <lable for="">Пароль:</lable>
+            <input type="text" name="pwd">
+        </div>
+        <div class="field">
+            <lable for="">Соль:</lable>
+            <input type="text" name="salt">
+        </div>
+        <div class="field">
+            <lable for="">Кол-во символов:</lable>
+            <input type="text" name="num_char">
+        </div>
+
+        <!-- Кнопка -->
+        <button type="submit">Старт!</button>
+    </form>
+
+    <div class="result">
+        {{ par_1 }}
+    </div>
 </div>
 {% endblock %}
