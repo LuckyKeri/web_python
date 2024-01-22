@@ -61,7 +61,42 @@ header {
 main {
     grid-area: m;
 }
+.content {
+    height: 100%;
+    display: grid;
+    justify-items: center;
+}
+.content h1 {
+    grid-row: 1/2;
+}
+.content form {
+    grid-row: 2/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.content .field {
+    display: flex;
+    justify-content: space-between;
+}
 
+/* комбинированный селектор по дочерному элементу  table элемента с классом content */
+.content>table {
+    grid-row: 2/4;
+    border: 2px solid green;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+/* комбинированный селектор по дочерному элементу  Th элемента с классом content */
+.content th {
+    background-color: cadetblue;
+    color: white;
+    text-transform: lowercase;
+}
+.content td {
+    border: 1px solid cadetblue;
+}
 /*  *** footer *** */
 footer {
     grid-area: f;

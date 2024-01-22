@@ -1,14 +1,29 @@
 {% extends "base.html" %}
 
 {% block main %}
-<div>
-    <h1>Page 3</h1>
+<div class="content">
+    <h1>Данные из БД</h1>
 
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    </p>
-    <p>
-        Voluptatum porro et fuga, officiis ratione minus maiores quibusdam aperiam inventore a tempore explicabo excepturi magni hic laborum eveniet cupiditate facere ab!
-    </p>
+    <!-- Таблица -->
+    <table>
+        <!-- строка заголовков столбцов -->
+        <tr>
+            <th>№</th>
+            <th>Пароль</th>
+            <th>Соль</th>
+            <th>Кол-во символов</th>
+            <th>Результат</th>
+        </tr>
+        <!-- строки данных -->
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </div>
 {% endblock %}
