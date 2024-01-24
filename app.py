@@ -2,7 +2,8 @@ from flask import Flask, render_template, request
 from pwdGen import pwdGenerator
 import db
 
-DB_PATH = "database/site_log.db"
+# DB_PATH = "database/site_log.db"
+DB_PATH = "/home/KerimkulovaB/database/site_log.db"
 
 app = Flask(__name__)
 
@@ -38,4 +39,4 @@ def p_3():
 
 if __name__ == "__main__":
     db.create_db(DB_PATH)
-    app.run(debug=True)
+    app.ru() #debug=True)
